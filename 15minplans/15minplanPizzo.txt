@@ -1,0 +1,12 @@
+15 minute plan:
+-Everyone on infrastructure to start
+1. Boot up in Single User Mode and remove any malicious software
+2. Update system to latest version
+3. Setup networking (Kali|interfaces, CentOS|ifcfg, Ubuntu|Netplan)
+4. Setup Services (/etc/apache2 or other for https)
+5. Setup Monitoring (tail log files with terminator on screen)
+6. Setup whiteboard central (command changes, passwords, net architecture)
+7. Split into CTF and Infra Team
+8. Infra Team harden with "fun" script and implementing best practices (disable root login, passwords, bad users, etc)
+9. CTF Team categorize challenges and split up 
+ 
