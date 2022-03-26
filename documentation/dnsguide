@@ -1,0 +1,72 @@
+ DNS Guide:
+ 
+in directory /etc/bind ---- 
+CHECK STATUS ----- systemctl status named
+
+FILES
+named.conf ----- include statements .options, .local, .default-zones
+named.conf.default-zones ----- defines different zones
+named.conf.local ----- placeholder for local file
+named.conf.options ----- holds different options for DNS 
+
+Modifying default-zones
+-follow format of:
+FORWARD
+zone "<forward lookup URL>" IN {
+  type master;
+  file "/etc/bind/zones/<FILE>";    //MAKE DIR ZONES
+  allow-update{ none; };
+};
+
+REVERSE
+zone "<reverse lookup IP>" IN {       //IN BIND IP ADDRESS WILL BE WRITTEN IN REVERSE---FIRST 3 OCTETS---EX: "8.168.192.in-addr.arpa"
+  type master;
+  file "/etc/bind/zone/<FILE>";     //MAKE DIR ZONES
+  allow-update{ none; };
+};
+
+BIND DATA FILE ex: db.0,local --- THERE ARE EMPTY db files so the structure is already there
+
+---------------------------------------------------------------------------------------------------------------
+
+FORWARD FILE 
+-change localhost to domain we want ex: ncae.team3.org
+-get rid of localhost on the root.localhost so its just root
+-have to increment serial when you make changes <IMPORTANT>
+-in second section change localhost to name of computer ex: sandbox-Ubuntu
+
+FORMAT
+
+@     IN      NS          sandbox-Ubuntu
+sandbox-Ubuntu IN A       192.168.8.2    //CREATES AN A RECORD FOR DNS SERVER
+www            IN A       192.168.8.3    //CREATES A RECORD FOR WEB SERVER
+
+---------------------------------------------------------------------------------------------------------------
+
+REVERSE FILE
+-change localhost but keep period ex: ncae.team3.org.
+-change root.localhost to root.ncae.team3.org.
+-increment serial!!!
+-change localhost to hostname
+-DONT FORGET PERIODS
+
+FORMAT
+
+@     IN      NS          sandbox-Ubuntu.
+3   IN PTR  www.ncae.team3.org.           //reverse entry for Web Server
+2   IN PTR  dns.ncae.team3.org.           //reverse entry for DNS 
+
+---------------------------------------------------------------------------------------------------------------
+
+resolve.conf
+FILES:
+/etc/netplan/01-network-manager-all.yaml
+/etc/resolv.conf
+
+-add nameserver IP
+ex:   
+nameserver  192.168.8.2
+-HAVE TO DO THIS FOR EVERY COMPUTER ON THE INTERNAL NETWORK
+
+
+
