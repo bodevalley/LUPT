@@ -68,5 +68,47 @@ ex:
 nameserver  192.168.8.2
 -HAVE TO DO THIS FOR EVERY COMPUTER ON THE INTERNAL NETWORK
 
+---------------------------------------------------------------------------------------------------------------
+
+ADDITIONAL ZONES
+
+Adding subdomains by adding a A record on the forward DNS ex:
+@    IN      NS     sandbox-Ubuntu
+score IN   A        <IP of other machine>
+
+ALWAYS INCREMENT SERIAL AND RESTART SERVICE WHEN MAKING CHANGES!
+command ---- sudo systemctl restart named
+
+Check setup with:
+command ----  nslookup <URL>
+
+When you don't have an entry for the network the DNS is trying reach then an additional zone needs to be added to the named.conf.default.zone
+ex zone add:
+
+zone "20.172.in-addr.arpa" IN {
+    type master;
+    file "/etc/bind/zones/reverse.ncaecybergames.org";
+    allow-update { none; };
+};
+
+ex file entry add:
+
+@     IN     NS     sandbox-Ubuntu.
+1.0  IN PTR   score.ncaecybergames.org.     //just need the octets not specified by the zone file in this case IP is 172.20.0.1 so just reverse of 0.1
+
+INCREMENT SERIAL AND RESTART SERVICE
+
+---------------------------------------------------------------------------------------------------------------
+
+QUERIES THROUGH THE ROUTER (EXTERNAL TO INTERNAL DNS)
+
+
+Set the external resolv.conf to the ip address of the router
+
+On router:
+sudo firewall -cmd --zone=external --permanent --add-forward-port=port=53:proto=udp:toport=53:toaddr=192.168.8.2  
+
+TO REMOVE A RULE ----   sudo firewall -cmd --zone=external --permanent --remove-forward-port=port=53:proto=udp:toport=53:toaddr=192.168.8.2  //REMOVE IS KEY DIFFERENCE
+
 
 
