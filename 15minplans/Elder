@@ -1,45 +1,19 @@
-alias commands for red team taunting
- 
-first priority- getting services up, network start, secure the network
-
-Configure kali machines
-/etc/network/interfaces
+Configure Internal Kali machine(s)   Internal LAN 192.168.t.0/24
+- Need static IPs
+- Modify /etc/network/interfaces 
 auto eth0
 iface eth0 inet static
-address x.x.x.x
-gateway x.x.x.x
+	     address 192.168.t.10[1-6]
+	     netmask 255.255.255.0
+- Save file
+- Sudo symstemctl restart networking
+- Ping/ ip a to make sure system is up and running
 
-Configure web server
-/netplan
-Might not be apache2: may be something else
-Webserver in /etc/ or /var/www/html/
-Find html file and change information to display team number/info
-
-Configure CentOS routers (internal and external)
-/etc/sysconfig/network-scripts (static and ONBOOT=yes/even edit “ZONE=“ as well)
-IPADDR= x.x.x.x
-NETMASK= x.x.x.x
-
-
-
-organize everything 
-
-Once network is up, create users for ssh logins 
-
-Make sure ssh is up and running with new passwords
-
-Check at firewall-cmd rules
-
-Check logs in VMs (can use tail to watch for new logs)
-
-Monitor evidence of potential breakins
-Cd /var/log/syslog
-
-tail -f /var/log/syslog
-
-/auth.log
-/auth.log.1
-/user.log
-/user.log.1
-
-—run scripts to scan machines and services
+Configure External Kali machine(s)   External LAN 172.18.0.0/16
+- DHCP is assigned (same for shell/FTP)
+- Modify /etc/network/interfaces
+auto eth0
+iface eth0 inet dhcp
+- Save file
+- Sudo systemctl restart networking
+- Ping/ ip a to make sure system is up and running
