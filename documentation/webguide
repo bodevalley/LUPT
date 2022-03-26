@@ -1,0 +1,41 @@
+IMPORTANT DIRS AND FILES:
+Ubuntu-
+/etc/apache2
+  Files:
+  /etc/apache2/apache2.conf
+  
+/etc/nginx
+
+------------------------------------------------------------------------------------------------
+
+CHECKING WEB SERVICE
+systemctl status apache2   ----- check for apache
+systemctl status httpd   ----- check for web server on centOS machine
+systemctl status nginx   ----- check for nginx
+
+------------------------------------------------------------------------------------------------
+
+STARTING/STOPPING/RESTARTING SERVICE
+sudo systemctl start <apache2 or nginx>
+sudo systemctl stop <apache2 or nginx>
+sudo systemctl restart <apache2 or nginx>
+
+------------------------------------------------------------------------------------------------
+
+APACHE:
+
+/etc/apache2/apache2.conf
+-main config file 
+
+/etc/apache2/sites-available/000-default.conf
+-shows where the site will listen ----- ex: <VirtualHost *:80>
+-document root = where the website exists ----- ex: /var/www/html
+
+/etc/apache2/sites-available/default-ssl.conf 
+-where ssl will be configured
+
+
+/var/www/html/index.html   or .php
+-html for the root of the website (default page)
+-for comp it will be the "This file is owned by team #"
+
