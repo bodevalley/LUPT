@@ -3,9 +3,9 @@ Configure Internal Kali machine(s)   Internal LAN 192.168.t.0/24
 - Modify /etc/network/interfaces 
 auto eth0
 iface eth0 inet static
-	     address 192.168.t.10[1-6]
-	     netmask 255.255.255.0
-	     gateway 192.168.t.1 
+	address 192.168.t.10[1-6]
+	netmask 255.255.255.0
+	gateway 192.168.t.1 
 	
 - Save file
 - Sudo symstemctl restart networking
