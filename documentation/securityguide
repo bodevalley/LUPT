@@ -1,0 +1,27 @@
+Making VMs Secured (Linux/Ubuntu/CentOS)
+- Add user by useradd command (userdel to delete user)
+- Edit /etc/sudoers
+- Sudo visudo
+
+# User privilege specification
+<USER>          ALL=(ALL:ALL)  ALL
+- Put this exactly under the root user in this category #
+- Save file
+————————————————————————
+Disabling root User
+- Using your new user with sudo privileges, modify etc/passwd
+- Change /usr/bin/zsh of root to /usr/sbin/nologin in file 
+- Save /etc/passwd
+- Confirm the change has been made by trying to log into root  
+————————————————————————
+
+- Keep passwords recorded of created users in Excel
+- Change jumphost password ASAP
+- Look for backdoor executables on systems
+- LinPEAS/other scripts to scan machines for vulnerabilities to patch (Probably won’t need to)
+- Single User Mode 
+- Check logs of systems for unauthorized logins
+Commands:
+last- checks last login attempts (man last to see switches)
+sudo lastb- displays bad login attempts 
+tail -f /var/log/<FILE>- prints out actions performed by user (user.log/user.log.1)
