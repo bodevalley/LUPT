@@ -1,0 +1,16 @@
+KALI GUIDE
+
+Static Network Setup:
+  Config File:
+   /etc/network/interfaces
+------------------------------------------------------------------------
+   
+  Format:
+  
+  auto <name of interface ex. eth0, ens18>
+  iface <name of interface> inet <dhcp or static>
+          address <IP address --- ex. 172.2.t.100>
+          netmask <subnet mask --- ex. 255.255.0.0>
+------------------------------------------------------------------------
+  Applying changes:
+  sudo systemctl restart networking
