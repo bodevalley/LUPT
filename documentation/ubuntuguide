@@ -1,0 +1,15 @@
+Ubuntu Network Configuration         Internal LAN 192.168.t.0/24
+- Modify /etc/netplan/……01-network.yaml (nano is recommended)
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    ens18: 
+      addresses:
+        - 192.168.t.5/24
+      gateway4: 192.168.t.1
+  
+- Save file 
+- Sudo Netplan apply
+- ping/ip a to see if service is up
+- *Watch syntax*
