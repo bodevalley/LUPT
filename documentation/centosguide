@@ -1,0 +1,20 @@
+CENTOS GUIDE:
+
+Static Networking: 
+
+Config file:
+  /etc/sysconfig/network-scripts/ifcfg-<<interface>>
+  
+Format:
+-list of options but here are the important ones to know
+
+BOOTPROTO=<static or dhcp>  --static config or dhcp
+ONBOOT=<yes or no>       --when restarted it will automatically turn on
+
+--ADD TO END OF FILE IF NOT PRESENT
+IPADDR=<IP ADDRESS --- ex. 172.2.t.100> --sets the ip address
+NETMASK=<Netmask --- ex. 255.255.0.0>   --sets the netmask
+
+
+--RESTART SERVICE
+sudo systemctl restart network
