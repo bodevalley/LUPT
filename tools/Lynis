@@ -1,0 +1,16 @@
+Instructions for Lynis
+
+#Getting lynis off of github
+cd /(directory of choosing)
+git clone https://github.com/CISOfy/lynis
+
+#Running lynis
+#Must be in the directory of download
+cd lynis
+lynis audit system
+
+#Logs, logs are purged before every run
+default log location is: /var/log/lynis.log
+
+#Reports
+default report location is: /var/log/lynis-report.dat
