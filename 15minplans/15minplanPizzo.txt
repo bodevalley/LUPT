@@ -74,4 +74,4 @@ COMMAND: sudo systemctl restart named
 
 4. Ensure Service is up and work on hardening/CTFs
 -Let's compete well for Christ
-
+James 1:2-3 "Therefore Brothers and Sisters, consider it all joy when you face trials of many kinds because you know the testing of your faith produces perserverance."
