@@ -1,3 +1,7 @@
+Download GitHub Repo:
+sudo git clone https://github.com/bodevalley/LUPT.git
+
+
 Check for users: 
 cat /etc/passwd
 Remove any unnecessary users
@@ -53,4 +57,5 @@ nano /etc/selinux/config
 	• SELINUX=enforcing
 
 File Permissions:
-run permissions.sh from github and verify that the changes have taken effect
+run permissions.sh from github
+verify /etc/passwd is now rw-r--r-- and the owner and group are root
