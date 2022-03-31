@@ -81,4 +81,4 @@ chmod 600 /etc/shadow
 chown root:root /etc/shadow
 
 chmod 600 /etc/gshadow
-chown root:root /etc/gshadwo
+chown root:root /etc/gshadow
