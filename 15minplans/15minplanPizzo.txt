@@ -46,3 +46,32 @@ CHANGE == SELINUX=enforcing
 run permissions.sh
 
 ------------------------------------------------------------------------------
+
+3. Configure DNS (You got this!)
+
+ALWAYS INCREMENT SERIAL WHEN MAKING CHANGES
+
+DIR: /etc/bind
+
+--update default-zones
+-reference dnsguide.txt
+
+--update forward file
+-reference dnsguide.txt
+
+--update reverse file
+-reference dnsguide.txt
+
+--update resolv.conf
+-reference dnsguide.txt
+
+-restart DNS 
+COMMAND: sudo systemctl restart named
+
+-change resolv.conf on all other hosts to name DNS server as the nameserver
+
+------------------------------------------------------------------------------
+
+4. Ensure Service is up and work on hardening/CTFs
+-Let's compete well for Christ
+
