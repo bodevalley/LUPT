@@ -1,0 +1,12 @@
+Guide for SSL Configuration:
+
+Once web server is configured navigate to the CA's server:
+
+http://<CA's IP>/certsrv
+
+click "Download Certificate"
+
+save the certificate in /var/www/ directory and restart the service using:
+sudo systemctl restart apache2
+
+this should recoginize the ssl cert and allow the website to be available on port 443 or HTTPS
