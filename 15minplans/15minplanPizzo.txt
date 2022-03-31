@@ -10,5 +10,39 @@ FILE: /etc/netplan/..../01-network.yaml
 
 COMMAND: sudo netplan apply
 
-2. 
- 
+------------------------------------------------------------------------------
+
+2. Secure System
+
+--check /etc/passwd
+if bad users: 
+COMMAND: userdel <username>
+
+--add user to sudo and check groups
+COMMAND:usermod -aG sudo <username>
+FILE: /etc/group
+delete bad groups:
+COMMAND groupdel <groupname>
+
+--disable root
+FILE: /etc/passwd
+Swap /bin/bash to /sbin/nologin for root
+
+
+--disable SSH root login
+FILE: /etc/ssh/sshd_config
+CHANGE == PermitRootLogin no
+COMMAND: systemctl restart sshd
+
+--change password 
+COMMAND: passwd <username>
+update excel file w/creds
+
+--enable SELinux:
+FILE: /etc/selinux/config
+CHANGE == SELINUX=enforcing
+
+--change perms
+run permissions.sh
+
+------------------------------------------------------------------------------
