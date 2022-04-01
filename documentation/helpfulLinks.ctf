@@ -14,10 +14,12 @@ ImmunityDBG - https://www.immunityinc.com/products/debugger/
 Forensics:
 Autopsy - https://www.autopsy.com/download/
 binwalk - sudo apt-get install binwalk
+Wireshark - https://www.wireshark.org/download.html
 
 Steg:
 StegOnline - https://stegonline.georgeom.net/
 Steghide - http://steghide.sourceforge.net/
+Gimp - https://www.gimp.org/downloads/
 
 Web:
 Burp Suite - https://portswigger.net/burp/communitydownload
