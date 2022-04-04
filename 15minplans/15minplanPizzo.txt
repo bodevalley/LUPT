@@ -1,5 +1,77 @@
 15 minute plan:
 
 1. set static IP
-2. 
- 
+FILE: /etc/netplan/..../01-network.yaml
+    ethernets:
+    ens18: 
+      addresses:
+        - 192.168.t.5/24
+      gateway4: 192.168.t.1
+
+COMMAND: sudo netplan apply
+
+------------------------------------------------------------------------------
+
+2. Secure System
+
+--check /etc/passwd
+if bad users: 
+COMMAND: userdel <username>
+
+--add user to sudo and check groups
+COMMAND:usermod -aG sudo <username>
+FILE: /etc/group
+delete bad groups:
+COMMAND groupdel <groupname>
+
+--disable root
+FILE: /etc/passwd
+Swap /bin/bash to /sbin/nologin for root
+
+
+--disable SSH root login
+FILE: /etc/ssh/sshd_config
+CHANGE == PermitRootLogin no
+COMMAND: systemctl restart sshd
+
+--change password 
+COMMAND: passwd <username>
+update excel file w/creds
+
+--enable SELinux:
+FILE: /etc/selinux/config
+CHANGE == SELINUX=enforcing
+
+--change perms
+run permissions.sh
+
+------------------------------------------------------------------------------
+
+3. Configure DNS (You got this!)
+
+ALWAYS INCREMENT SERIAL WHEN MAKING CHANGES
+
+DIR: /etc/bind
+
+--update default-zones
+-reference dnsguide.txt
+
+--update forward file
+-reference dnsguide.txt
+
+--update reverse file
+-reference dnsguide.txt
+
+--update resolv.conf
+-reference dnsguide.txt
+
+-restart DNS 
+COMMAND: sudo systemctl restart named
+
+-change resolv.conf on all other hosts to name DNS server as the nameserver
+
+------------------------------------------------------------------------------
+
+4. Ensure Service is up and work on hardening/CTFs
+-Let's compete well for Christ
+James 1:2-3 "Therefore Brothers and Sisters, consider it all joy when you face trials of many kinds because you know the testing of your faith produces perserverance."

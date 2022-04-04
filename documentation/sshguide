@@ -1,1 +1,16 @@
-Guide for ssh service config
+#Guide for ssh service config
+
+sshd_config for the server and ssh_config for the client
+both are found in /etc/ssh/
+
+#Set for automatic start and begin the service
+systemctl enable sshd && systemctl start sshd 
+
+#Check service status
+systemctl status sshd
+
+#Disable root login
+PermitRootLogin no
+
+#Change port
+Port $PORTNUM

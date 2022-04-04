@@ -1,0 +1,25 @@
+Helpful Links for the CTF:
+
+General:
+CyberChef - https://gchq.github.io/CyberChef/
+
+Crypto:
+Versatile Decoder - https://www.dcode.fr/
+
+RE:
+IDA - https://hex-rays.com/ida-free/
+Ghidra - https://ghidra-sre.org/
+ImmunityDBG - https://www.immunityinc.com/products/debugger/
+
+Forensics:
+Autopsy - https://www.autopsy.com/download/
+binwalk - sudo apt-get install binwalk
+Wireshark - https://www.wireshark.org/download.html
+
+Steg:
+StegOnline - https://stegonline.georgeom.net/
+Steghide - http://steghide.sourceforge.net/
+Gimp - https://www.gimp.org/downloads/
+
+Web:
+Burp Suite - https://portswigger.net/burp/communitydownload
