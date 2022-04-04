@@ -10,5 +10,9 @@ Install:
   
 Status:
   sudo systemctl <status, enable> mysql
+
+Config:
+  Files are under /etc/mysql
+  /etc/mysql/my.cnf
   
 Default port is 3306
