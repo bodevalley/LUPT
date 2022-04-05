@@ -58,6 +58,13 @@ Enable SELinux:
 nano /etc/selinux/config
 	• SELINUX=enforcing
 
+Single User Mode Password:
+grub2-setpassword
+
+#Find menuentry and remove --unrestricted
+vim /boot/grub2/grub.cfg 
+#Reboot to verify password is set
+
 File Permissions:
 run permissions.sh from github
 verify /etc/passwd is now rw-r--r-- and the owner and group are root
