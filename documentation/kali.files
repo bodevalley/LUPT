@@ -1,0 +1,113 @@
+.:
+total 8
+drwxrwxrwt 14 root root 360 Apr  5 04:32 .
+drwxr-xr-x  1 root root 140 Apr  5 04:25 ..
+srwxrwxrwx  1 kali kali   0 Apr  5 04:26 dbus-SLfmxifyQ5
+drwxrwxrwt  2 root root  40 Apr  5 04:25 .font-unix
+drwxrwxrwt  2 root root  60 Apr  5 04:26 .ICE-unix
+-rw-r--r--  1 kali kali   0 Apr  5 04:32 kali.files
+drwx------  2 kali kali  60 Apr  5 04:26 ssh-XXXXXXfmfl9t
+drwx------  3 root root  60 Apr  5 04:26 systemd-private-3ce5652f67904a4ab1faf80f9a893788-colord.service-FRqv6i
+drwx------  3 root root  60 Apr  5 04:25 systemd-private-3ce5652f67904a4ab1faf80f9a893788-haveged.service-hNVNrK
+drwx------  3 root root  60 Apr  5 04:26 systemd-private-3ce5652f67904a4ab1faf80f9a893788-ModemManager.service-ip8nws
+drwx------  3 root root  60 Apr  5 04:26 systemd-private-3ce5652f67904a4ab1faf80f9a893788-systemd-logind.service-SFFOsr
+drwx------  3 root root  60 Apr  5 04:26 systemd-private-3ce5652f67904a4ab1faf80f9a893788-upower.service-iGthPP
+drwxrwxrwt  2 root root  40 Apr  5 04:25 VMwareDnD
+drwx------  2 root root  40 Apr  5 04:26 vmware-root_493-2117877171
+-r--r--r--  1 root root  11 Apr  5 04:26 .X0-lock
+drwxrwxrwt  2 root root  60 Apr  5 04:26 .X11-unix
+-rw-------  1 kali kali 398 Apr  5 04:26 .xfsm-ICE-1V71J1
+drwxrwxrwt  2 root root  40 Apr  5 04:25 .XIM-unix
+
+./.font-unix:
+total 0
+drwxrwxrwt  2 root root  40 Apr  5 04:25 .
+drwxrwxrwt 14 root root 360 Apr  5 04:32 ..
+
+./.ICE-unix:
+total 0
+drwxrwxrwt  2 root root  60 Apr  5 04:26 .
+drwxrwxrwt 14 root root 360 Apr  5 04:32 ..
+srwxrwxrwx  1 kali kali   0 Apr  5 04:26 1490
+
+./ssh-XXXXXXfmfl9t:
+total 0
+drwx------  2 kali kali  60 Apr  5 04:26 .
+drwxrwxrwt 14 root root 360 Apr  5 04:32 ..
+srw-------  1 kali kali   0 Apr  5 04:26 agent.1490
+
+./systemd-private-3ce5652f67904a4ab1faf80f9a893788-colord.service-FRqv6i:
+total 0
+drwx------  3 root root  60 Apr  5 04:26 .
+drwxrwxrwt 14 root root 360 Apr  5 04:32 ..
+drwxrwxrwt  2 root root  40 Apr  5 04:26 tmp
+
+./systemd-private-3ce5652f67904a4ab1faf80f9a893788-colord.service-FRqv6i/tmp:
+total 0
+drwxrwxrwt 2 root root 40 Apr  5 04:26 .
+drwx------ 3 root root 60 Apr  5 04:26 ..
+
+./systemd-private-3ce5652f67904a4ab1faf80f9a893788-haveged.service-hNVNrK:
+total 0
+drwx------  3 root root  60 Apr  5 04:25 .
+drwxrwxrwt 14 root root 360 Apr  5 04:32 ..
+drwxrwxrwt  2 root root  40 Apr  5 04:25 tmp
+
+./systemd-private-3ce5652f67904a4ab1faf80f9a893788-haveged.service-hNVNrK/tmp:
+total 0
+drwxrwxrwt 2 root root 40 Apr  5 04:25 .
+drwx------ 3 root root 60 Apr  5 04:25 ..
+
+./systemd-private-3ce5652f67904a4ab1faf80f9a893788-ModemManager.service-ip8nws:
+total 0
+drwx------  3 root root  60 Apr  5 04:26 .
+drwxrwxrwt 14 root root 360 Apr  5 04:32 ..
+drwxrwxrwt  2 root root  40 Apr  5 04:26 tmp
+
+./systemd-private-3ce5652f67904a4ab1faf80f9a893788-ModemManager.service-ip8nws/tmp:
+total 0
+drwxrwxrwt 2 root root 40 Apr  5 04:26 .
+drwx------ 3 root root 60 Apr  5 04:26 ..
+
+./systemd-private-3ce5652f67904a4ab1faf80f9a893788-systemd-logind.service-SFFOsr:
+total 0
+drwx------  3 root root  60 Apr  5 04:26 .
+drwxrwxrwt 14 root root 360 Apr  5 04:32 ..
+drwxrwxrwt  2 root root  40 Apr  5 04:26 tmp
+
+./systemd-private-3ce5652f67904a4ab1faf80f9a893788-systemd-logind.service-SFFOsr/tmp:
+total 0
+drwxrwxrwt 2 root root 40 Apr  5 04:26 .
+drwx------ 3 root root 60 Apr  5 04:26 ..
+
+./systemd-private-3ce5652f67904a4ab1faf80f9a893788-upower.service-iGthPP:
+total 0
+drwx------  3 root root  60 Apr  5 04:26 .
+drwxrwxrwt 14 root root 360 Apr  5 04:32 ..
+drwxrwxrwt  2 root root  40 Apr  5 04:26 tmp
+
+./systemd-private-3ce5652f67904a4ab1faf80f9a893788-upower.service-iGthPP/tmp:
+total 0
+drwxrwxrwt 2 root root 40 Apr  5 04:26 .
+drwx------ 3 root root 60 Apr  5 04:26 ..
+
+./VMwareDnD:
+total 0
+drwxrwxrwt  2 root root  40 Apr  5 04:25 .
+drwxrwxrwt 14 root root 360 Apr  5 04:32 ..
+
+./vmware-root_493-2117877171:
+total 0
+drwx------  2 root root  40 Apr  5 04:26 .
+drwxrwxrwt 14 root root 360 Apr  5 04:32 ..
+
+./.X11-unix:
+total 0
+drwxrwxrwt  2 root root  60 Apr  5 04:26 .
+drwxrwxrwt 14 root root 360 Apr  5 04:32 ..
+srwxrwxrwx  1 root root   0 Apr  5 04:26 X0
+
+./.XIM-unix:
+total 0
+drwxrwxrwt  2 root root  40 Apr  5 04:25 .
+drwxrwxrwt 14 root root 360 Apr  5 04:32 ..
