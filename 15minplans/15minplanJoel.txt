@@ -66,3 +66,5 @@ verify /etc/passwd is now rw-r--r-- and the owner and group are root
 run chattrOn.sh from github using sudo
 verify /etc/passwd cannot be altered
 
+Vulnerability Enumeration:
+Follow lynus and rkhunter tutorials on github
