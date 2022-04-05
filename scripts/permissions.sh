@@ -15,9 +15,6 @@ chmod 400 /etc/cron.monthly
 chown root:root /etc/cron.d
 chmod 400 /etc/cron.d
 
-chown root:root <crontabfile>
-chmod 400 <crontabfile>
-
 chmod 644 /etc/passwd
 chown root:root /etc/passwd
 
