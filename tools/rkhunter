@@ -10,6 +10,7 @@ cd rkhunter-1.4.6
 ./installer.sh --install
 
 rkhunter --update
+rkhunter --propupd
 
 #Run rkhunter
 rkhunter -c
