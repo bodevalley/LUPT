@@ -4,6 +4,12 @@ sudo git clone https://github.com/bodevalley/LUPT.git
 Update System:
 sudo apt upgrade
 
+Check for alias:
+alias
+
+Remove all aliases:
+unalias -a or unalias $ALIASNAME
+
 Check for users: 
 cat /etc/passwd
 Remove any unnecessary users
