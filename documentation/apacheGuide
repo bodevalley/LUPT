@@ -1,0 +1,10 @@
+Source: https://ubuntu.com/tutorials/install-and-configure-apache#1-overview
+
+Install:
+  sudo apt update
+  sudo apt install apache2
+  
+sudo systemctl status apache2
+webpage available at http://127.0.0.1
+
+index file is at /var/www/html/index.html

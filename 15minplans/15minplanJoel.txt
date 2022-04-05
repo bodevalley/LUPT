@@ -1,6 +1,8 @@
 Download GitHub Repo:
 sudo git clone https://github.com/bodevalley/LUPT.git
 
+Update System:
+sudo apt upgrade
 
 Check for users: 
 cat /etc/passwd
