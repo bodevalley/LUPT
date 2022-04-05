@@ -7,4 +7,4 @@ chattr -i /etc/shadow
 chattr -i /etc/group
 chattr -i /etc/gshadow
 
-chattr -R -i /home/$USER/.ssh
+chattr -R -i /home/*/.ssh
