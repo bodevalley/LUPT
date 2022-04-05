@@ -1,0 +1,21 @@
+#Guide for installation and use of rkhunter
+#All should be done with sudo unless using the root user
+
+cd /mnt
+wget https://netix.dl.sourceforge.net/project/rkhunter/rkhunter/1.4.6/rkhunter-1.4.6.tar.gz
+
+tar -xvf rkhunter-1.4.6.tar.gz
+cd rkhunter-1.4.6
+
+./installer.sh --install
+
+rkhunter --update
+
+#Run rkhunter
+rkhunter -c
+
+#Log File
+cat /var/log/rkhunter.log
+
+#Check only Warnings
+grep Warning /var/log/rkhunter.log
