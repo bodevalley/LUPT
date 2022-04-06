@@ -1,3 +1,5 @@
+
+StaticUbuntu() {
 echo "What is your IP?"
 read IP
 echo "What is your interface?"
@@ -17,3 +19,4 @@ sudo cp /etc/netplan/* /tmp/backup.netplan
 sudo rm /etc/netplan/*
 sudo cp /tmp/01-network-manager-all.yaml  /etc/netplan/ 
 sudo netplan apply
+}
