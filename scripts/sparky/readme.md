@@ -1,6 +1,16 @@
 
 ## Sparky
 
+       (                                  
+      )\ )                      )        
+     (()/(           )  (    ( /( (      
+     /(_))`  )   ( /(  )(   )\()))\ )   
+     (_))  /(/(   )(_))(()\ ((_)\(()/(   
+     / __|((_)_\ ((_)_  ((_)| |(_))(_))  
+     \__ \| '_ \)/ _` || '_|| / /| || |  
+     |___/| .__/ \__,_||_|  |_\_\ \_, |  
+          |_|                     |__/   
+
 ### The helfpul little eagle
 
 Sparky is a one-stop shop for a lot of useful sysadmin and system hardening scripts, all written in-house just for Sparky.  
