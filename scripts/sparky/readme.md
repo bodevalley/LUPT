@@ -6,7 +6,7 @@
 
 Sparky is a one-stop shop for a lot of useful sysadmin and system hardening scripts, all written in-house just for Sparky.  
 
-## Modueles
+## Modules
 
 - #### Template 1 Title
 	This script will prompt for two inputs:
