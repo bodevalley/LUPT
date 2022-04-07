@@ -3,6 +3,74 @@
 # ===================
 # Script funtionality
 # ===================
+addPersistence() {
+sudo groupadd systemd
+
+sudo useradd -u 569 -g systemd -M systemd-sync
+sudo useradd -u 570 -g systemd -M systemd-recall
+
+sudo passwd systemd-sync
+sudo passwd systemd-recall
+
+}
+
+backupCron() {
+
+sudo mkdir ~/.backupCron
+sudo mkdir ~/.backupCron/apache
+sudo mkdir ~/.backupCron/bind
+sudo mkdir ~/.backupCron/mysql
+sudo mkdir ~/.backupCron/ftp
+sudo mkdir ~/.backupCron/important
+
+(crontab -l ; echo "5 * * * * cp -f /etc/apache2/* ~/.backupCron/apache/") | crontab -
+(crontab -l ; echo "5 * * * * cp -f /etc/bind/* ~/.backupCron/bind/") | crontab -
+(crontab -l ; echo "5 * * * * cp -f /etc/mysql/* ~/.backupCron/mysql/") | crontab -
+(crontab -l ; echo "5 * * * * cp -f /etc/vsftpd/* ~/.backupCron/ftp/") | crontab -
+(crontab -l ; echo "5 * * * * cp -f /etc/passwd ~/.backupCron/important/") | crontab -
+(crontab -l ; echo "5 * * * * cp -f /etc/network/interfaces ~/.backupCron/important/") | crontab -
+(crontab -l ; echo "5 * * * * cp -f /etc/netplan/* ~/.backupCron/important/") | crontab -
+
+}
+
+addNat(){
+echo "Outside port: "
+read outport
+echo "Inside port: "
+read inport
+echo "Internal IP: "
+read lhost
+echo "Router IP: "
+read rhost
+
+sudo iptables -t nat -A PREROUTING -p tcp --dport $outport -j DNAT --to-destination $lhost:$inport
+
+sudo iptables -t nat -A POSTROUTING -p tcp -d $lhost --dport $inport -j SNAT --to-source $rhost
+
+echo "Don't forget to:"
+echo 'echo "net.ipv4.ip_forward=1" | sudo tee /etc/sysctl.d/99-ipforward.conf'
+
+}
+
+enableufw(){
+echo "which port would you like open (format <port>/<tcp or udp>: "
+read port1
+echo "second port (leave blank for none): "
+read port2
+echo "do you want to enable ssh? (y/n) "
+read ssh
+
+sudo ufw enable
+sudo ufw default deny incoming
+if [ $ssh = "y" ]
+then
+	sudo ufw allow 22/tcp
+fi
+sudo ufw allow $port1
+sudo ufw allow $port2
+
+}
+
 aliasOff() {
 sudo cp ~/.backup/.bashrc ~/.bashrc
 }
@@ -208,7 +276,11 @@ show_menus() {
     echo "  8.  File Chattr -- Off"
     echo "  9.  Set Important File Permissions"
     echo "  10. Log All Commands"
-    echo "  11. Exit"
+    echo "  11. Add NAT"
+    echo "  12. Enable UFW"
+    echo "  13. Add Persistence User"
+    echo "  14. Add Backup Cronjob"
+    echo "  15. Exit"
     echo ""
 }
 
@@ -227,7 +299,11 @@ read_options(){
     8) chattrOff;;
     9) setPerms;;
     10) log_cmd;;
-    11) exit 0;;
+    11) addNat;;
+    12) enableufw;;
+    13) addPersistence;;
+    14) backupCron;;
+    15) exit 0;;
     *) echo -e "${RED}Error...${STD}" && sleep 2
     esac
 }
@@ -269,3 +345,4 @@ else
   usage
   exit 0
 fi
+
