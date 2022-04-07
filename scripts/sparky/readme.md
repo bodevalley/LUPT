@@ -8,7 +8,7 @@
     |___/| .__/ \__,_||_|  |_\_\ \_, |  \__||_||_|\___|  |_||_|\___||_|| .__/ |_|   \_,_||_|  |___/\__||_|  |_|| .__/  \__|  
          |_|                     |__/                                  |_|                                     |_|            
 
-### The helfpul little eagle
+### The helpful little eagle
 
 Sparky is a one-stop shop for a lot of useful sysadmin and system hardening scripts, all written in-house just for Sparky.  
 
