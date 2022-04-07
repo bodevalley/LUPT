@@ -3,16 +3,18 @@ Yes, this is based on yours, Joel
 Download GitHub Repo:
 sudo git clone https://github.com/bodevalley/LUPT.git
 
-Get mysql up and running
-
-Update System:
-sudo apt upgrade
+CHANGE PASSWORD FIRST
 
 Check for alias:
 alias
 
 Remove all aliases:
 unalias -a or unalias $ALIASNAME
+
+Get mysql up and running
+
+Update System:
+sudo apt upgrade
 
 Check for users: 
 cat /etc/passwd
