@@ -1,6 +1,13 @@
 Download GitHub Repo:
 sudo git clone https://github.com/bodevalley/LUPT.git
 
+Setup FTP:
+sudo systemctl start vsftpd
+cp /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsfptd.conf.orig
+
+After Setup and Service Running:
+cp /etc/vsftpd/vsftpd.conf /home/systemdd/.ftpbackup
+
 Update System:
 sudo apt upgrade
 
