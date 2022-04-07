@@ -1,0 +1,87 @@
+Yes, this is based on yours, Joel
+
+Download GitHub Repo:
+sudo git clone https://github.com/bodevalley/LUPT.git
+
+Get mysql up and running
+
+Update System:
+sudo apt upgrade
+
+Check for alias:
+alias
+
+Remove all aliases:
+unalias -a or unalias $ALIASNAME
+
+Check for users: 
+cat /etc/passwd
+Remove any unnecessary users
+
+Add your user to sudo groups:
+usermod -aG wheel $USERNAME  #centos
+usermod -aG sudo $USERNAME   #debian/ubuntu
+
+Change Root Login Shell:
+nano /etc/passwd
+	• Change /bin/bash to /sbin/nologin for root
+
+Disable Root Login Via Console Device
+	• mv /etc/securetty /etc/securetty.orig
+	• touch /etc/securetty
+	• chmod 600 /etc/securetty
+	
+Disable SSH Root Login
+	• vim /etc/ssh/sshd_config
+	• PermitRootLogin no
+	• Restart ssh
+
+Change password:
+passwd $USERNAME
+
+Lock boot directory: 
+nano /etc/fstab
+	• 
+chown root:root /etc/fstab
+
+Boot Permissions:
+chown root:root /etc/grub.conf
+chmod 400 /etc/grub.conf
+sed -i "/SINGLE/s/sushell/sulogin/" /etc/sysconfig/init 
+sed -i "/PROMPT/s/yes/no/" /etc/sysconfig/init
+
+Check installed packages:
+apt-cache pkgnames
+yum list installed
+
+Check open ports:
+netstat -antp
+
+Secure SSH:
+nano /etc/ssh/sshd_config
+	• PermitRootLogin no
+	• PermitEmptyPasswords no
+chown root:root /etc/ssh/sshd_config
+chmod 600 /etc/ssh/sshd_config
+
+Enable SELinux:
+nano /etc/selinux/config
+	• SELINUX=enforcing
+
+Single User Mode Password:
+grub2-setpassword
+
+#Find menuentry and remove --unrestricted
+vim /boot/grub2/grub.cfg 
+#Reboot to verify password is set
+
+File Permissions:
+run permissions.sh from github
+verify /etc/passwd is now rw-r--r-- and the owner and group are root
+
+#Do this only once everything else is set in stone
+run chattrOn.sh from github using sudo
+verify /etc/passwd cannot be altered
+
+Vulnerability Enumeration:
+Follow lynus and rkhunter tutorials on github
