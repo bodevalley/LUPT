@@ -1,5 +1,27 @@
-Source: https://www.mysqltutorial.org/install-mysql-ubuntu/
+Sources: https://www.mysqltutorial.org/install-mysql-ubuntu/
+         https://askubuntu.com/questions/314830/how-to-make-ip-address-static-eth0#484616
 
+Check that IP is set up correctly (statically)-------------------------------------------
+
+    Open interface file (sudo vi /etc/network/interfaces) and look for
+
+    auto eth0
+    iface eth0 inet dhcp
+
+    Replace the above commands with
+
+    auto eth0
+    iface eth0 inet static
+    address 192.168.1.100(Enter desired ip here)
+    netmask 255.255.255.0
+    network 192.168.1.0
+    broadcast 192.168.1.255
+    gateway 192.168.1.1
+
+    Then enter
+
+    sudo ifdown eth0; sudo ifup eth0
+----------------------------------------------------------------------------------------
 Get Packages:
   wget -c https://repo.mysql.com//mysql-apt-config_0.8.13-1_all.deb
   sudo dpkg -i mysql-apt-config_0.8.13-1_all.deb 
