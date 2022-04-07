@@ -16,3 +16,66 @@ Config:
   /etc/mysql/my.cnf
   
 Default port is 3306
+
+############################################################################################################
+Default Config Files:
+
+/etc/mysql/my.cnf -----------------------------------------------------------------------------
+
+#
+# The MySQL database server configuration file.
+#
+# You can copy this to one of:
+# - "/etc/mysql/my.cnf" to set global options,
+# - "~/.my.cnf" to set user-specific options.
+# 
+# One can use all long options that the program supports.
+# Run program with --help to get a list of available options and with
+# --print-defaults to see which it would actually understand and use.
+#
+# For explanations see
+# http://dev.mysql.com/doc/mysql/en/server-system-variables.html
+
+# This will be passed to all mysql clients
+# It has been reported that passwords should be enclosed with ticks/quotes
+# escpecially if they contain "#" chars...
+# Remember to edit /etc/mysql/debian.cnf when changing the socket location.
+
+# Here is entries for some specific programs
+# The following values assume you have at least 32M ram
+
+!includedir /etc/mysql/conf.d/
+
+/etc/mysql/my.cnf.fallback---------------------------------------------------------------------
+#
+# The MySQL database server configuration file.
+#
+# You can copy this to one of:
+# - "/etc/mysql/my.cnf" to set global options,
+# - "~/.my.cnf" to set user-specific options.
+# 
+# One can use all long options that the program supports.
+# Run program with --help to get a list of available options and with
+# --print-defaults to see which it would actually understand and use.
+#
+# For explanations see
+# http://dev.mysql.com/doc/mysql/en/server-system-variables.html
+
+# This will be passed to all mysql clients
+# It has been reported that passwords should be enclosed with ticks/quotes
+# escpecially if they contain "#" chars...
+# Remember to edit /etc/mysql/debian.cnf when changing the socket location.
+
+# Here is entries for some specific programs
+# The following values assume you have at least 32M ram
+
+!includedir /etc/mysql/conf.d/
+
+/etc/mysql/conf.d/mysql.cnf----------------------------------------------------------------------
+[mysql]
+
+/etc/mysql/conf.d/mysqldump.cnf----------------------------------------------------------------------
+[mysqldump]
+quick
+quote-names
+max_allowed_packet	= 16M
