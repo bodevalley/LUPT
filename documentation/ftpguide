@@ -1,1 +1,18 @@
 Guide for FTP Server
+
+Configuration file located at /etc/vsftpd/vsftpd.conf
+
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+chroot_local_user=YES
+allow_writeable_chroot=YES
+
+
+#If you enable, you must edit the list with the correct users
+userlist_enable=YES
+userlist_file=/etc/vsftpd/user_list
+
+#Restart to set changes
+sudo systemctl restart vsftpd
+
