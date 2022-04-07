@@ -13,13 +13,6 @@
 Sparky is a one-stop shop for a lot of useful sysadmin and system hardening scripts, all written in-house just for Sparky.  
 
 ## Modules
-
-#### Template 1 Title
-	This script will prompt for two inputs:
-		1. Input1 - Controls the value for function abc.  (Optional)
-		2. Input2 - Required IP address of host
-		
-	This script does A, B, and C.  Please keep in mind that while A and B are reversable, C is not.  
 	
 #### Static Ubuntu
 	This script will prompt for two inputs:
