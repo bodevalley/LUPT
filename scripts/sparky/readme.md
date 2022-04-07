@@ -23,4 +23,5 @@ Sparky is a one-stop shop for a lot of useful sysadmin and system hardening scri
 	1. port1 - The first port to forward.  Put it in the format <port>/<tcp or udp> (eg: 80/tcp)
 	2. port2 - The second port to forward. .Format is the same as port1. 
 	3. SSH prompt (case sensitive) - Adds a rule for SSH or not.  
+	
 	Please note that this script denies all incoming traffic from all ports unless specified.  
