@@ -71,13 +71,14 @@ grub2-setpassword
 vim /boot/grub2/grub.cfg 
 #Reboot to verify password is set
 
-File Permissions:
-run permissions.sh from github
-verify /etc/passwd is now rw-r--r-- and the owner and group are root
-
-#Do this only once everything else is set in stone
-run chattrOn.sh from github using sudo
-verify /etc/passwd cannot be altered
+Run Sparky Scripts using sparky.sh -m:
+	chattrOn.sh for turning on chattr for sensitive files
+	log_cmd.sh for logging commands run, stored in /var/log/cmd.log
+	scan.sh to scan for suspicious file names
+	permissions.sh to harden certain file permissions
+	ufwEnable.sh to turn on the firewall, run with ports 20 and 21 and enable ssh
+	backupCron.sh to backup specific files and create cron jobs for them
+	addPersistence.sh to create new users for persistence, must set the passwords and add to the excel sheet
 
 Vulnerability Enumeration:
 Follow lynus and rkhunter tutorials on github
