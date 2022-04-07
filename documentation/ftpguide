@@ -1,5 +1,7 @@
 Guide for FTP Server
 
+Update: sudo yum update vsftpd
+
 Configuration file located at /etc/vsftpd/vsftpd.conf
 
 anonymous_enable=NO
