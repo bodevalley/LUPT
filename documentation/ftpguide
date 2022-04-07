@@ -6,7 +6,7 @@ anonymous_enable=NO
 local_enable=YES
 write_enable=YES
 chroot_local_user=YES
-allow_writeable_chroot=YES
+allow_writeable_chroot=NO
 
 
 #If you enable, you must edit the list with the correct users
