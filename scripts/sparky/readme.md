@@ -3,6 +3,26 @@
 
 ### The helfpul little eagle
 
+@################@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+&####BBBBBB#P:5#&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@&&&###BBBBB!.B#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@##BBBBP ?#&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@&##BBBB7.B#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@##BBBBG.7##@@&&&&&&&&&&&&@&&&@&&&&&&&&&&&&&&&&
+@@@&##BBBB? G#&@&####BBBBBB#P?B#&&####BBBBBB#5JB#&
+@@@##BBBBB:~##@@&&###BBBBBBB^:##@&&####BBBBBB.~##@
+@@&##BBBBJ P#&@@@@@@##BBBBB5 Y#&@@@@@&##BBBBJ P#&@
+@@##BBBBB:^##&&&&&&&##BBBBB~:##@@@@@@&##BBBB:^##@@
+@&##BBBBG75###BBBBBB##BBBBP J#&@@@@@@##BBBBY 5#&@@
+@&#BBBBBBBBBBBBBBBBBBBBBBB!.B#@@@@@@&##BBBB^:##@@@
+&##BBBBBBBBBBBBBBBBBBBBBBG ?#&@@@@@@##BBBB5 Y#&@@@
+&########################? G#&@@@@@&##BBBB~.B#@@@@
+@@@@@@@@@@@@@@@@@@&######? G&&@@@@&##BBBBP J#&@@@@
+@@@@@@@@@@@@@@@@@@&##BBBBB!~PB#&&###BBBBB:~##@@@@@
+@@@@@@@@@@@@@@@@@@@##BBBBBBG5PGBBBBBBBBP^!B#@@@@@@
+@@@@@@@@@@@@@@@@@@@&##BBBBBBBBBBBBBBBP?!Y#&@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@&####BBBBBBBGP555P#&@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@&&&#########&&@@@@@@@@@@@@
 
 Sparky is a one-stop shop for a lot of useful sysadmin and system hardening scripts, all written in-house just for Sparky.  
 
