@@ -1,8 +1,3 @@
-
-# Sparky 
-
-### The helfpul little eagle
-
 @################@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 &####BBBBBB#P:5#&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @&&&###BBBBB!.B#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -23,6 +18,10 @@
 @@@@@@@@@@@@@@@@@@@&##BBBBBBBBBBBBBBBP?!Y#&@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@&####BBBBBBBGP555P#&@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@&&&#########&&@@@@@@@@@@@@
+
+# Sparky 
+
+### The helfpul little eagle
 
 Sparky is a one-stop shop for a lot of useful sysadmin and system hardening scripts, all written in-house just for Sparky.  
 
