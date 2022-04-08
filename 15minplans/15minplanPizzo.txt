@@ -10,6 +10,8 @@ FILE: /etc/netplan/..../01-network.yaml
 
 COMMAND: sudo netplan apply
 
+--USING SPARKY OPTION STATIC UBUNTU
+
 ------------------------------------------------------------------------------
 
 2. Secure System
@@ -28,7 +30,6 @@ COMMAND groupdel <groupname>
 FILE: /etc/passwd
 Swap /bin/bash to /sbin/nologin for root
 
-
 --disable SSH root login
 FILE: /etc/ssh/sshd_config
 CHANGE == PermitRootLogin no
@@ -42,9 +43,15 @@ update excel file w/creds
 FILE: /etc/selinux/config
 CHANGE == SELINUX=enforcing
 
---change perms
-run permissions.sh
+--check cronjobs
+crontab -e or -l
 
+USING SPARKY
+-permissions 
+-persistence users
+-log_cmd
+-backup_cron
+-scan
 ------------------------------------------------------------------------------
 
 3. Configure DNS (You got this!)
