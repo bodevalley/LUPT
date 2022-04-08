@@ -103,7 +103,7 @@ apt-cache pkgnames
 yum list installed
 
 Check open ports:
-netstat -antp
+netstat <-peanut, -antp>
 
 Secure SSH:
 nano /etc/ssh/sshd_config
