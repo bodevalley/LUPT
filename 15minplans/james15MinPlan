@@ -1,8 +1,5 @@
 Yes, this is based on yours, Joel
 
-Download GitHub Repo:
-sudo git clone https://github.com/bodevalley/LUPT.git
-
 Check for alias:
 alias
 
@@ -37,6 +34,9 @@ Check that IP is set up correctly (statically)
 
     sudo ifdown eth0; sudo ifup eth0
 ----------------------------------------------------------------------------------------
+Download GitHub Repo:
+sudo git clone https://github.com/bodevalley/LUPT.git
+
 Get Packages:
   wget -c https://repo.mysql.com//mysql-apt-config_0.8.13-1_all.deb
   sudo dpkg -i mysql-apt-config_0.8.13-1_all.deb 
