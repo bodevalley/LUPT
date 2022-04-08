@@ -92,6 +92,6 @@ Sparky is a one-stop shop for a lot of useful sysadmin and system hardening scri
 	
 #### netlog
 	netlog logs all tcp incoming network traffic to /var/log/iptables_networklogging.log.  It also reloads rsyslog.  
-	Noteoworthy information:
+	Noteworthy information:
 		SRC - Source address for connection
 		DPT - Port connected to
