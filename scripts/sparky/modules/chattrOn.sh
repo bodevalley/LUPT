@@ -1,12 +1,12 @@
 chattrOn() {
-sudo chattr +i /etc/passwd
-sudo chattr +i /etc/shadow
-sudo chattr +i /etc/group
-sudo chattr +i /etc/gshadow
-
-sudo chattr -R +i /home/*/.ssh
-
 sudo cp /usr/bin/chattr /usr/bin/rttahc
+
+sudo rttahc +i /etc/passwd
+sudo rttahc +i /etc/shadow
+sudo rttahc +i /etc/group
+sudo rttahc +i /etc/gshadow
+
+sudo rttahc -R +i /home/*/.ssh
 
 sudo rm -rf /usr/bin/chattr
 
