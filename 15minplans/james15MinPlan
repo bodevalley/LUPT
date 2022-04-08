@@ -68,6 +68,8 @@ Add your user to sudo groups:
 usermod -aG wheel $USERNAME  #centos
 usermod -aG sudo $USERNAME   #debian/ubuntu
 
+run ubuntuPermissions.sh
+
 Change Root Login Shell:
 nano /etc/passwd
 	• Change /bin/bash to /sbin/nologin for root
