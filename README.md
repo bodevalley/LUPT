@@ -5,4 +5,4 @@
       ███████╗╚██████╔╝██║        ██║            ██║ ╚████║╚██████╗██║  ██║███████╗   ██║  ██║███████╗██║     ╚██████╔╝
       ╚══════╝ ╚═════╝ ╚═╝        ╚═╝            ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝╚══════╝   ╚═╝  ╚═╝╚══════╝╚═╝      ╚═════╝ 
     
-#### <center> Home of the Flames and Sparky the Helpful Script</center>
+# <div align="center"> **Home of the Flames and Sparky the Helpful Script** </div>
