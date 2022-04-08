@@ -147,8 +147,7 @@ sudo rm -rf /usr/bin/chattr
 }
 
 log_cmd(){
-	touch /etc/profile.d/zloggingbash.sh
-	echo $'trap \'echo "$ECHO":"$BASH_COMMAND" >> /var/log/cmd.log\' DEBUG' >> /etc/profile.d/zloggingbash.sh
+	cp zloggingbash.sh /etc/profile.d/
 	touch /var/log/cmd.log
 	chmod 666 /var/log/cmd.log
 }
