@@ -17,7 +17,8 @@ Sparky is a one-stop shop for a lot of useful sysadmin and system hardening scri
 #### Static Ubuntu
 	This script will prompt for two inputs:
 		1. IP - IP to set interface to (ex. 192.168.2.5)
-		2. Interface - Interface to set IP to (ex. eth0, ens33) 
+		2. Interface - Interface to set IP to (ex. eth0, ens33)
+		3. Gateway - The deTault gateway for interface
 		
 	This script sets the static IP for an Ubuntu box to the specified IP on the specified interface. This will copy the original config file to the
 	/tmp/backup.netplan if anything goes wrong to restore the intial configuration. This will also do the 'sudo netplan apply' for you.
@@ -26,6 +27,7 @@ Sparky is a one-stop shop for a lot of useful sysadmin and system hardening scri
 	This script will prompt for two inputs:
 		1. IP - IP to set interface to (ex. 192.168.2.5)
 		2. Interface - Interface to set IP to (ex. eth0, ens33) 
+		3. Gateway - The deTault gateway for interface
 		
 	This script sets the static IP for a Kali box to the specified IP on the specified interface. This will copy the original config file to the
 	/tmp/backup.interfaces if anything goes wrong to restore the intial configuration. This will also do the 'sudo systemctl restart networking' for you.
@@ -44,9 +46,11 @@ Sparky is a one-stop shop for a lot of useful sysadmin and system hardening scri
 	commands like ls, cat, and others simply run the command 'echo' which will be useless. However for the blue team there will be aliases added for the reverse
 	of the command to work like the normal command example is 'sl' for 'ls' or 'tac' for 'cat'. 
 	
+	An alias is added for 'alien' which runs 'source ~/.bashrc' which needs to be run after aliasOn and aliasOff is used.  
+	
 #### Alias Off
 	This script reverses the aliases done in the 'Alias On' Module. It will take the copy of .bashrc created in the 'Alias On' module and overwrite the changed
-	.bashrc. IMPORTANT: One note is you must run the command 'source ~/.bashrc' and restart your terminal to clear the bad aliases.
+	.bashrc. IMPORTANT: One note is you must run the command 'alien' OR 'source ~/.bashrc' and restart your terminal to clear the bad aliases.
 	
 #### Scan
 	This script will save the contents of the file system and save them to /tmp/files.txt and then grep the txt document for different trigger words such as red
