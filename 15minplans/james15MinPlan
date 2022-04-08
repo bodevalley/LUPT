@@ -9,26 +9,29 @@ alias
 Remove all aliases:
 unalias -a or unalias $ALIASNAME
 
-CHANGE PASSWORD FIRST
+CHANGE PASSWORD
 
 Get mysql up and running: ------------------------------------------------------------------------------
 
 Check that IP is set up correctly (statically)
 
-    Open interface file (sudo vi /etc/network/interfaces) and look for
-
-    auto eth0
-    iface eth0 inet dhcp
-
-    Replace the above commands with
-
-    auto eth0
-    iface eth0 inet static
-    address 192.168.1.100(Enter desired ip here)
+    Open interface file (sudo vi /etc/network/interfaces) and make sure it looks like this:
+    
+    #The loopback network interface
+    auto lo
+    iface lo inet loopback
+    
+    #The primary network interface
+    #auto enp4s1
+    auto enp4s1
+    #iface enp4s1 inet dhcp
+    iface enp4s1 inet static
+    
+    address 192.168.4.15(Enter desired ip here)
     netmask 255.255.255.0
-    network 192.168.1.0
-    broadcast 192.168.1.255
-    gateway 192.168.1.1
+    #network 192.168.1.0
+    #broadcast 192.168.1.255
+    gateway 192.168.4.1 #update when connected to the external network
 
     Then enter
 
