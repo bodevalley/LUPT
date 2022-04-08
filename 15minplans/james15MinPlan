@@ -8,9 +8,7 @@ unalias -a or unalias $ALIASNAME
 
 CHANGE PASSWORD
 
-Get mysql up and running: ------------------------------------------------------------------------------
-
-Check that IP is set up correctly (statically)
+Check that IP is set up correctly (statically) --------------------------------------------------------------------------
 
     Open interface file (sudo vi /etc/network/interfaces) and make sure it looks like this:
     
@@ -33,10 +31,15 @@ Check that IP is set up correctly (statically)
     Then enter
 
     sudo ifdown eth0; sudo ifup eth0
+    
+    /etc/netplan?
+    netplan apply?
 ----------------------------------------------------------------------------------------
 Download GitHub Repo:
 sudo git clone https://github.com/bodevalley/LUPT.git
 
+
+Get mysql up and running: ------------------------------------------------------------------------------
 Get Packages:
   wget -c https://repo.mysql.com//mysql-apt-config_0.8.13-1_all.deb
   sudo dpkg -i mysql-apt-config_0.8.13-1_all.deb 
