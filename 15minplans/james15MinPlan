@@ -3,16 +3,54 @@ Yes, this is based on yours, Joel
 Download GitHub Repo:
 sudo git clone https://github.com/bodevalley/LUPT.git
 
-CHANGE PASSWORD FIRST
-
 Check for alias:
 alias
 
 Remove all aliases:
 unalias -a or unalias $ALIASNAME
 
-Get mysql up and running
+CHANGE PASSWORD FIRST
 
+Get mysql up and running: ------------------------------------------------------------------------------
+
+Check that IP is set up correctly (statically)
+
+    Open interface file (sudo vi /etc/network/interfaces) and look for
+
+    auto eth0
+    iface eth0 inet dhcp
+
+    Replace the above commands with
+
+    auto eth0
+    iface eth0 inet static
+    address 192.168.1.100(Enter desired ip here)
+    netmask 255.255.255.0
+    network 192.168.1.0
+    broadcast 192.168.1.255
+    gateway 192.168.1.1
+
+    Then enter
+
+    sudo ifdown eth0; sudo ifup eth0
+----------------------------------------------------------------------------------------
+Get Packages:
+  wget -c https://repo.mysql.com//mysql-apt-config_0.8.13-1_all.deb
+  sudo dpkg -i mysql-apt-config_0.8.13-1_all.deb 
+  
+Install:
+  sudo apt-get install mysql-server
+  sudo mysql_secure_installation (optional) All answers are yes
+  
+Status:
+  sudo systemctl <status, enable> mysql
+
+Config:
+  Files are under /etc/mysql
+  /etc/mysql/my.cnf
+  
+Default port is 3306
+--------------------------------------------------------------------------------------------------
 Update System:
 sudo apt upgrade
 
