@@ -46,6 +46,10 @@ CHANGE == SELINUX=enforcing
 --check cronjobs
 crontab -e or -l
 
+--check aliases
+alias
+unalias
+
 USING SPARKY
 -permissions 
 -persistence users
