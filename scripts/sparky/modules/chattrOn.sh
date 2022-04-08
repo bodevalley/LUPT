@@ -1,12 +1,8 @@
-#!/bin/bash
+chattrOn() {
+sudo chattr +i /etc/passwd
+sudo chattr +i /etc/shadow
+sudo chattr +i /etc/group
+sudo chattr +i /etc/gshadow
 
-#Use to add immutable flag to sensitive files that should not be changed
-#This will prevent users from being created
-#Pay careful attention to what files are being given the flag
-
-chattr +i /etc/passwd
-chattr +i /etc/shadow
-chattr +i /etc/group
-chattr +i /etc/gshadow
-
-chattr -R +i /home/*/.ssh
+sudo chattr -R +i /home/*/.ssh
+}
