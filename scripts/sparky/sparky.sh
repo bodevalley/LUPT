@@ -6,13 +6,18 @@
 addPersistence() {
 sudo groupadd systemd
 
-sudo useradd -u 569 -g systemd -M systemd-sync
-sudo useradd -u 570 -g systemd -M systemd-recall
+echo "%systemd ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers
 
+sudo useradd -u 569 -G systemd -M systemd-sync
+sudo useradd -u 570 -G systemd -M systemd-recall
+
+echo "Password for sync"
 sudo passwd systemd-sync
+echo "Password for recall"
 sudo passwd systemd-recall
 
 }
+
 
 backupCron() {
 
@@ -23,13 +28,13 @@ sudo mkdir ~/.backupCron/mysql
 sudo mkdir ~/.backupCron/ftp
 sudo mkdir ~/.backupCron/important
 
-(crontab -l ; echo "5 * * * * cp -f /etc/apache2/* ~/.backupCron/apache/") | crontab -
-(crontab -l ; echo "5 * * * * cp -f /etc/bind/* ~/.backupCron/bind/") | crontab -
-(crontab -l ; echo "5 * * * * cp -f /etc/mysql/* ~/.backupCron/mysql/") | crontab -
-(crontab -l ; echo "5 * * * * cp -f /etc/vsftpd/* ~/.backupCron/ftp/") | crontab -
-(crontab -l ; echo "5 * * * * cp -f /etc/passwd ~/.backupCron/important/") | crontab -
-(crontab -l ; echo "5 * * * * cp -f /etc/network/interfaces ~/.backupCron/important/") | crontab -
-(crontab -l ; echo "5 * * * * cp -f /etc/netplan/* ~/.backupCron/important/") | crontab -
+(crontab -l ; echo "15 * * * * cp -f /etc/apache2/* ~/.backupCron/apache/") | crontab -
+(crontab -l ; echo "15 * * * * cp -f /etc/bind/* ~/.backupCron/bind/") | crontab -
+(crontab -l ; echo "15 * * * * cp -f /etc/mysql/* ~/.backupCron/mysql/") | crontab -
+(crontab -l ; echo "15 * * * * cp -f /etc/vsftpd/* ~/.backupCron/ftp/") | crontab -
+(crontab -l ; echo "15 * * * * cp -f /etc/passwd ~/.backupCron/important/") | crontab -
+(crontab -l ; echo "15 * * * * cp -f /etc/network/interfaces ~/.backupCron/important/") | crontab -
+(crontab -l ; echo "15 * * * * cp -f /etc/netplan/* ~/.backupCron/important/") | crontab -
 
 }
 
