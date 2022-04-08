@@ -1,10 +1,9 @@
-#!/bin/bash
+chattrOff() {
+sudo chattr -i /etc/passwd
+sudo chattr -i /etc/shadow
+sudo chattr -i /etc/group
+sudo chattr -i /etc/gshadow
 
-#Use to remove immutable flag to sensitive files that need to be changed
+sudo chattr -R -i /home/*/.ssh
+}
 
-chattr -i /etc/passwd
-chattr -i /etc/shadow
-chattr -i /etc/group
-chattr -i /etc/gshadow
-
-chattr -R -i /home/*/.ssh
