@@ -338,8 +338,8 @@ read_options(){
     10) log_cmd;;
     11) addNat;;
     12) enableufw;;
-    13) addPersistence
-    14) backupCron
+    13) addPersistence;;
+    14) backupCron;;
     15) exit 0;;
     *) echo -e "${RED}Error...${STD}" && sleep 2
     esac
