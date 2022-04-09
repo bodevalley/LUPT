@@ -15,6 +15,9 @@ check passwd binary
  -- whereis passwd
  -- just use /usr/bin/passwd
 
+change root password
+ -- use excel sheet
+
 run persistence sparky script for new users
  -- su systemd-sync
 
