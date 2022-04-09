@@ -327,47 +327,19 @@ read_options(){
     read -p "Enter choice [ 1 - 2 ] " choice
     case $choice in
     1) StaticUbuntu;;
-        echo "Static IP Assigned -- Ubuntu"
-        sleep 2;;
     2) StaticKali;;
-        echo "Static IP Assigned -- Kali"
-        sleep 2;;
     3) StaticCentOS;;
-        echo "Static IP Assigned -- CentOS"
-        sleep 2;;
     4) aliasOn;;
-        echo "Alias Trap On - Use Command Alien to enable it!"
-        sleep 2;;
     5) aliasOff;;
-        echo "Alias Trap Off - Use Command Alien to disable it!"
-        sleep 2;;
     6) Scan;;
-        echo "File system scanned - log at /tmp/sus.txt"
-        sleep 2;;
     7) chattrOn;;
-        echo "Files successfully chattr'd"
-        sleep 2;;
     8) chattrOff;;
-        echo "Files no longer immutable"
-        sleep 2;;
     9) setPerms;;
-        echo "File Permissions Set"
-        sleep 2;;
     10) log_cmd;;
-        echo "Commands will be saved to /var/log/"
-        sleep 2;;
     11) addNat;;
-        echo "Nat Added"
-        sleep 2;;
     12) enableufw;;
-        echo "Host-based Firewall UFW Enabled"
-        sleep 2;;
     13) addPersistence
-        echo "systemd-sync and systemd-recall accounts created and added to the systemd group"
-        sleep 2;;
     14) backupCron
-        echo "Cronjobs added"
-        sleep 2;;
     15) exit 0;;
     *) echo -e "${RED}Error...${STD}" && sleep 2
     esac
