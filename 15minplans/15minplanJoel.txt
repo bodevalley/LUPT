@@ -1,91 +1,93 @@
-Download GitHub Repo:
-sudo git clone https://github.com/bodevalley/LUPT.git
+-----------
+FIRST STEPS
+-----------
 
-Setup FTP:
-sudo systemctl start vsftpd
-cp /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsfptd.conf.orig
+copy over sparky
+ -- sudo git clone https://github.com/bodevalley/LUPT.git
 
-After Setup and Service Running:
-cp /etc/vsftpd/vsftpd.conf /home/systemdd/.ftpbackup
+check for aliases
+ -- alias
 
-Update System:
-sudo apt upgrade
+remove any aliases
+ -- unalias
 
-Check for alias:
-alias
+check passwd binary
+ -- whereis passwd
+ -- just use /usr/bin/passwd
 
-Remove all aliases:
-unalias -a or unalias $ALIASNAME
+run persistence sparky script for new users
+ -- su systemd-sync
 
-Check for users: 
-cat /etc/passwd
-Remove any unnecessary users
+update system
+ -- sudo apt upgrade
 
-Add your user to sudo groups:
-usermod -aG wheel $USERNAME  #centos
-usermod -aG sudo $USERNAME   #debian/ubuntu
+---------------
+FTP & SSH Setup
+---------------
 
-Change Root Login Shell:
-nano /etc/passwd
-	• Change /bin/bash to /sbin/nologin for root
+setup FTP
+ -- sudo systemctl start vsftpd
 
-Disable Root Login Via Console Device
-	• mv /etc/securetty /etc/securetty.orig
-	• touch /etc/securetty
-	• chmod 600 /etc/securetty
-	
-Disable SSH Root Login
-	• vim /etc/ssh/sshd_config
-	• PermitRootLogin no
-	• Restart ssh
+backup original config file 
+ -- cp /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsfptd.conf.orig
 
-Change password:
-passwd $USERNAME
+once configured properly copy correct version
+ -- cp /etc/vsftpd/vsftpd.conf /home/systemd-sync/.ftpbackup
 
-Lock boot directory: 
-nano /etc/fstab
-	• 
-chown root:root /etc/fstab
+ssh root lockdown
+ -- PermitRootLogin no
+ -- PermitEmptyPasswords no
+ -- systemctl restart ssh
 
-Boot Permissions:
-chown root:root /etc/grub.conf
-chmod 400 /etc/grub.conf
-sed -i "/SINGLE/s/sushell/sulogin/" /etc/sysconfig/init 
-sed -i "/PROMPT/s/yes/no/" /etc/sysconfig/init
+lockdown permissions for ssh
+ -- chown root:root /etc/ssh/sshd_config
+ -- chmod 600 /etc/ssh/sshd_config
 
-Check installed packages:
-apt-cache pkgnames
-yum list installed
+copy ssh config files
+ -- cp /etc/ssh/sshd_config /etc/ssh/sshd_config_backup
+ -- cp /etc/ssh/sshd_config /home/systemd-sync/sshd_config_backup
 
-Check open ports:
-netstat -antp
+-----------------------
+AFTER SERVICE HARDENING
+-----------------------
 
-Secure SSH:
-nano /etc/ssh/sshd_config
-	• PermitRootLogin no
-	• PermitEmptyPasswords no
-chown root:root /etc/ssh/sshd_config
-chmod 600 /etc/ssh/sshd_config
+check for suspicious users
+ -- cat /etc/passwd
 
-Enable SELinux:
-nano /etc/selinux/config
-	• SELINUX=enforcing
+change root login shell
+ -- /bin/bash to /sbin/nologin
 
-Single User Mode Password:
-grub2-setpassword
+disable root login via console device
+ -- mv /etc/securetty /etc/securetty.orig
+ -- touch /etc/securetty
+ -- chmod 600 /etc/securetty
 
-#Find menuentry and remove --unrestricted
-vim /boot/grub2/grub.cfg 
-#Reboot to verify password is set
+enable SELinux
+ -- vim /etc/selinux/config
+ -- SELINUX=enforcing
 
-Run Sparky Scripts using sparky.sh -m:
-	chattrOn.sh for turning on chattr for sensitive files
-	log_cmd.sh for logging commands run, stored in /var/log/cmd.log
-	scan.sh to scan for suspicious file names
-	permissions.sh to harden certain file permissions
-	ufwEnable.sh to turn on the firewall, run with ports 20 and 21 and enable ssh
-	backupCron.sh to backup specific files and create cron jobs for them
-	addPersistence.sh to create new users for persistence, must set the passwords and add to the excel sheet
+single user mode password
+ -- grub2-setpassword
+ -- Use same password as systemd-sync
+ -- Find menuentry in /boot/grub2/grub.cfg and remove --unrestricted
 
-Vulnerability Enumeration:
-Follow lynus and rkhunter tutorials on github
+lock down file permissions
+ -- sparky permissions module
+
+log all commands run
+ -- sparky log_cmd module
+
+set immutable flags + delete binary
+ -- chattrOn sparky module
+
+make cronjobs for backups
+ -- sparky backupCron module
+
+setup firewall
+ -- ufwEnable with ports 20, 21, and SSH
+
+scan system for suspicious files
+ -- scan module in sparky
+
+vulnerability and rootkit scans
+ -- lynis and rkhunter instructions on github
