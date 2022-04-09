@@ -54,6 +54,10 @@ copy ssh config files
  -- cp /etc/ssh/sshd_config /etc/ssh/sshd_config_backup
  -- cp /etc/ssh/sshd_config /home/systemd-sync/sshd_config_backup
 
+locate files
+ -- sudo yum install mlocate
+ -- use locate to find the files
+
 -----------------------
 AFTER SERVICE HARDENING
 -----------------------
