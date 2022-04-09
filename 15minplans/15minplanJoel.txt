@@ -25,6 +25,13 @@ update system
 FTP & SSH Setup
 ---------------
 
+update FTP
+ -- sudo yum update vsftpd
+ 
+check FTP version for smiley face
+ -- vsftpd --version
+ -- LOOK OUT FOR 2.3.4
+
 setup FTP
  -- sudo systemctl start vsftpd
 
