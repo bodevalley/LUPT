@@ -105,6 +105,8 @@ yum list installed
 Check open ports:
 netstat <-peanut, -antp>
 
+sudo watch -d lsof -i -n -P #Thanks, Philip
+
 Secure SSH:
 nano /etc/ssh/sshd_config
 	• PermitRootLogin no
