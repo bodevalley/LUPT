@@ -6,3 +6,5 @@
     ╚══════╝ ╚═════╝ ╚═╝        ╚═╝     ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝╚══════╝  ╚═╝  ╚═╝╚══════╝╚═╝      ╚═════╝ 
     
 # <div align="center"> **Home of the Flames and Sparky the Helpful Script** </div>
+# <div align="center"> **3rd at NCAE Nationals** </div>
+# <div align="center"> **1st at NCAE Northeast Regionals** </div>
